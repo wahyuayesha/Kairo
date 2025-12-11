@@ -2,7 +2,7 @@ import 'package:kairo/domain/entities/trashEntity.dart';
 
 class TrashModel {
   List<String> className;
-  List<String> confidence;
+  List<double> confidence;
   String image;
 
   TrashModel({
@@ -11,18 +11,20 @@ class TrashModel {
     required this.image,
   });
 
-  static TrashModel fromJson(json) {
+  static TrashModel fromJson(Map<String, dynamic> json) {
+    final classes = json['classes'] as List;
+
     return TrashModel(
-      className: json['classes']['class_name'],
-      confidence: json['classes']['confidence'],
+      className: classes.map((e) => e['class_name'] as String).toList(),
+      confidence: classes.map((e) => (e['confidence'] as num).toDouble()).toList(),
       image: json['image'],
     );
   }
-
-  static toEntity(TrashModel model) {
+  static TrashEntity toEntity(TrashModel model) {
     return TrashEntity(
-      className: model.className,
+      className: model.className,      // list of string
       image: model.image,
     );
   }
+
 }

@@ -11,14 +11,16 @@ class Predictdatasource {
     final bytes = await file.readAsBytes();
     final base64Image = base64Encode(bytes);
 
-    final result = await http.post(
+    final response = await http.post(
       Uri.parse('${Config.backendAddress}/predict'),
       headers: {"Content-Type": "application/json"},
       body: jsonEncode({"image": base64Image}),
     );
+    print("RESPONSE: ${response.body}");
+    print("STATUS: ${response.statusCode}");
 
-    if (result.statusCode == 200) {
-      final Map<String, dynamic> data = jsonDecode(result.body);
+    if (response.statusCode == 200) {
+      final Map<String, dynamic> data = jsonDecode(response.body);
       return TrashModel.fromJson(data);
     } else {
       return null;
