@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:kairo/core/colors.dart';
 import 'package:kairo/view/controllers/predictControler.dart';
 import 'package:kairo/view/pages/riwayat.dart';
+import 'package:kairo/view/pages/tipspage.dart';
 import 'package:kairo/view/widgets/custom_homebutton.dart';
 
 class Homepage extends StatelessWidget {
@@ -61,6 +62,12 @@ class Homepage extends StatelessWidget {
                       onTap: () async {
                         print('kamera touched');
                         await predictcontroler.predictImage(false);
+                        if (predictcontroler.error.isNotEmpty) {
+                          GetSnackBar(title: 'Error');
+                        } else {
+                          GetSnackBar(title: 'Success');
+                          Get.to(Tipspage());
+                        }
                       },
                     ),
 
@@ -70,6 +77,12 @@ class Homepage extends StatelessWidget {
                       onTap: () async {
                         print('galeri touched');
                         await predictcontroler.predictImage(true);
+                        if (predictcontroler.error.isNotEmpty) {
+                          GetSnackBar(title: 'Error');
+                        } else {
+                          GetSnackBar(title: 'Success');
+                          Get.to(Tipspage());
+                        }
                       },
                     ),
 

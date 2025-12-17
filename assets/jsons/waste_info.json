@@ -1,0 +1,280 @@
+[
+  {
+    "id": 1,
+    "class": "Batteries",
+    "category": "Non-Valuable Waste",
+    "definition": "Baterai adalah sumber daya listrik berbasis kimia yang mengandung logam berat dan bahan toksik seperti merkuri, kadmium, dan lithium.",
+    "managements": [
+      "Simpan dalam wadah tertutup dan terpisah dari sampah lain",
+      "Hindari kerusakan fisik seperti menghancurkan atau membakar",
+      "Jangan dibuang ke tanah, sungai atau tempat pembakaran"
+    ],
+    "collection_sites": [
+      "Bank sampah",
+      "Drop box baterai di minimarket, kampus, atau kantor",
+      "Fasilitas limbah B3"
+    ],
+    "recycles": [
+      "Pemulihan logam seperti lithium, nikel, tembaga, dan kobalt",
+      "Dibuat kembali menjadi baterai baru setelah proses ekstraksi"
+    ]
+  },
+  {
+    "id": 2,
+    "class": "Chemicals",
+    "category": "Non-Valuable Waste",
+    "definition": "Bahan kimia rumah tangga seperti pembersih, pelarut, cat, minyak rem, pestisida, dan produk sejenis yang bersifat beracun atau korosif.",
+    "managements": [
+      "Simpan dalam kemasan asli bila memungkinkan",
+      "Jangan dicampur dengan bahan kimia lain",
+      "Jangan dibuang ke saluran air atau tanah"
+    ],
+    "collection_sites": [
+      "Fasilitas limbah B3",
+      "Program pengumpulan limbah kimia rumah tangga pemerintah"
+    ],
+    "recycles": [
+      "Pemulihan pelarut",
+      "Netralisasi dan pengolahan menjadi bahan kimia sekunder untuk industri"
+    ]
+  },
+  {
+    "id": 3,
+    "class": "E-Waste",
+    "category": "Non-Valuable Waste",
+    "definition": "E-waste adalah limbah elektronik seperti HP, laptop, TV, charger, motherboard yang mengandung logam berat dan komponen berbahaya.",
+    "managements": [
+      "Pisahkan perangkat elektronik dari sampah biasa",
+      "Kalau masih berfungsi, lebih baik dijual atau didonasikan",
+      "Jangan dibakar karena menghasilkan asap beracun"
+    ],
+    "collection_sites": [
+      "Bank sampah elektronik",
+      "Toko elektronik yang menerima e-waste",
+      "Fasilitas pengolahan e-waste berlisensi"
+    ],
+    "recycles": [
+      "Ekstraksi emas, tembaga, dan perak dari komponen PCB",
+      "Penggunaan komponen yang masih berfungsi untuk reparasi perangkat lain"
+    ]
+  },
+  {
+    "id": 4,
+    "class": "Medical",
+    "category": "Non-Valuable Waste",
+    "definition": "Limbah medis seperti jarum suntik, perban darah, masker bekas, sarung tangan, dan alat medis sekali pakai.",
+    "managements": [
+      "Gunakan sarung tangan saat menangani",
+      "Simpan jarum pada safety box atau wadah tahan tusuk",
+      "Jangan dibuang ke sampah umum"
+    ],
+    "collection_sites": [
+      "Puskesmas atau rumah sakit",
+      "Fasilitas pengolahan limbah medis"
+    ],
+    "recycles": [
+      "Sterilisasi dan daur ulang plastik medis oleh fasilitas khusus",
+      "Konversi menjadi bahan bakar RDF setelah autoclave"
+    ]
+  },
+  {
+    "id": 5,
+    "class": "Textiles",
+    "category": "Non-Valuable Waste",
+    "definition": "Pakaian atau tekstil bekas seperti celana, kaos, kain perca, dan sprei.",
+    "managements": [
+      "Pisahkan antara yang layak pakai dan tidak",
+      "Cuci bila kondisinya masih pantas digunakan",
+      "Simpan dalam keadaan kering agar tidak berjamur"
+    ],
+    "collection_sites": [
+      "Donasi (panti asuhan, lembaga sosial)",
+      "Pengepul tekstil",
+      "Bank sampah tekstil"
+    ],
+    "recycles": [
+      "Diolah menjadi kain pel, keset atau serat tekstil baru",
+      "Upcycling menjadi tas, dompet, pouch, atau produk kreatif"
+    ]
+  },
+  {
+    "id": 6,
+    "class": "Food",
+    "category": "Organic",
+    "definition": "Sisa makanan, sayuran, buah busuk, dan bahan organik dapur sejenis.",
+    "managements": [
+      "Pisahkan dari plastik atau logam",
+      "Potong kecil untuk mempercepat penguraian",
+      "Tidak dibuang ke tong sampah anorganik"
+    ],
+    "collection_sites": [
+      "Lubang biopori",
+      "Komposter rumah tangga",
+      "Komunitas pengelola kompos"
+    ],
+    "recycles": [
+      "Dijadikan kompos untuk tanaman",
+      "Dijadikan pakan maggot untuk peternakan"
+    ]
+  },
+  {
+    "id": 7,
+    "class": "Sachet",
+    "category": "Residual Waste",
+    "definition": "Kemasan kecil multilayer (aluminium + plastik) untuk produk seperti kopi sachet, shampo, snack.",
+    "managements": [
+      "Bilas dan keringkan agar tidak menarik serangga",
+      "Kumpulkan dalam satu wadah",
+      "Hindari pembakaran karena menghasilkan toksin"
+    ],
+    "collection_sites": [
+      "Bank sampah residu",
+      "Pengrajin ecobrick",
+      "Program pengumpulan kemasan merek tertentu"
+    ],
+    "recycles": [
+      "Ecobrick untuk bahan bangunan sederhana",
+      "Dilebur menjadi papan plastik komposit"
+    ]
+  },
+  {
+    "id": 8,
+    "class": "Cans",
+    "category": "Valuable Waste",
+    "definition": "Kaleng minuman dan makanan berbahan aluminium atau baja yang dapat didaur ulang tinggi nilainya.",
+    "managements": [
+      "Bilas kotoran makanan dan keringkan",
+      "Pipihkan bila memungkinkan untuk menghemat ruang",
+      "Pisahkan dari sampah plastik dan organik"
+    ],
+    "collection_sites": [
+      "Pengepul logam",
+      "Bank sampah",
+      "Fasilitas daur ulang logam"
+    ],
+    "recycles": [
+      "Dilebur untuk membuat kaleng dan komponen logam baru",
+      "Kerajinan logam aluminium (hiasan, produk kreatif)"
+    ]
+  },
+  {
+    "id": 9,
+    "class": "Cardboard",
+    "category": "Valuable Waste",
+    "definition": "Karton seperti kardus pengiriman dan kemasan makanan kering berbahan kertas tebal.",
+    "managements": [
+      "Pastikan tidak basah atau berminyak",
+      "Lipat untuk menghemat volume",
+      "Pisahkan dari kertas biasa"
+    ],
+    "collection_sites": [
+      "Bank sampah",
+      "Pengepul kardus",
+      "Fasilitas daur ulang kertas"
+    ],
+    "recycles": [
+      "Dijadikan kardus daur ulang",
+      "Dijadikan bubur kertas menjadi kemasan industri"
+    ]
+  },
+  {
+    "id": 10,
+    "class": "Glass",
+    "category": "Valuable Waste",
+    "definition": "Botol dan wadah kaca untuk minuman dan makanan.",
+    "managements": [
+      "Pisahkan bagian pecah untuk mencegah luka",
+      "Simpan dalam kontainer kuat seperti kardus",
+      "Jika ada warna, pisahkan sesuai jenis (bening, hijau, coklat) untuk nilai jual lebih tinggi"
+    ],
+    "collection_sites": [
+      "Bank sampah",
+      "Pengepul kaca",
+      "Fasilitas daur ulang kaca"
+    ],
+    "recycles": [
+      "Dilebur untuk membuat botol baru",
+      "Diolah menjadi bahan konstruksi seperti glassphalt"
+    ]
+  },
+  {
+    "id": 11,
+    "class": "Metal",
+    "category": "Valuable Waste",
+    "definition": "Logam scrap seperti besi, baja, kuningan, aluminium, dan tembaga dari barang rongsok.",
+    "managements": [
+      "Bersihkan dari oli atau kotoran berat",
+      "Potong bagian rongsok besar bila perlu",
+      "Pisahkan jenis logam untuk meningkatkan harga jual"
+    ],
+    "collection_sites": [
+      "Pengepul rongsok",
+      "Bank sampah",
+      "Fasilitas daur ulang logam"
+    ],
+    "recycles": [
+      "Dilebur menjadi bahan logam industri",
+      "Komponen manufaktur seperti rangka, pipa, dan besi cor"
+    ]
+  },
+  {
+    "id": 12,
+    "class": "Paper",
+    "category": "Valuable Waste",
+    "definition": "Kertas koran, buku, majalah, dokumen, dan arsip.",
+    "managements": [
+      "Jaga tetap kering dan bersih",
+      "Pisahkan dari tisu dan kertas berminyak",
+      "Ikat atau kumpulkan rapi"
+    ],
+    "collection_sites": [
+      "Bank sampah",
+      "Pengepul kertas",
+      "Fasilitas daur ulang kertas"
+    ],
+    "recycles": [
+      "Dijadikan kertas daur ulang",
+      "Dijadikan pulp untuk bahan kemasan"
+    ]
+  },
+  {
+    "id": 13,
+    "class": "Plastic",
+    "category": "Valuable Waste",
+    "definition": "Plastik rumah tangga seperti PP, HDPE, PET, LDPE, dan jenis lainnya.",
+    "managements": [
+      "Bilas dan keringkan",
+      "Kelompokkan berdasarkan jenis resin code bila memungkinkan",
+      "Jangan dibakar karena menghasilkan gas beracun"
+    ],
+    "collection_sites": [
+      "Bank sampah",
+      "Pengepul plastik",
+      "Fasilitas daur ulang plastik"
+    ],
+    "recycles": [
+      "Pelet plastik untuk industri daur ulang",
+      "Produk cetak injeksi seperti ember, pot, furnitur plastik"
+    ]
+  },
+  {
+    "id": 14,
+    "class": "Plastic Bottles",
+    "category": "Valuable Waste",
+    "definition": "Botol PET seperti botol air mineral dan minuman kemasan.",
+    "managements": [
+      "Kempeskan botol untuk menghemat ruang",
+      "Lepas tutup dan label—tutup biasanya PP dengan nilai jual tersendiri",
+      "Bilas dan keringkan sebelum menjual"
+    ],
+    "collection_sites": [
+      "Bank sampah",
+      "Pengepul PET",
+      "Fasilitas daur ulang plastik PET"
+    ],
+    "recycles": [
+      "Dilebur menjadi biji plastik PET",
+      "Bahan tekstil seperti serat polyester dan dakron"
+    ]
+  }
+]

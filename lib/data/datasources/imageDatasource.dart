@@ -21,6 +21,7 @@ class ImageDatasource {
     }
 
     final XFile? pickedFile = await picker.pickImage(
+
       source: fromGallery ? ImageSource.gallery : ImageSource.camera,
     );
 

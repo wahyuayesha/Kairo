@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:kairo/data/models/trashModel.dart';
 import 'package:kairo/domain/entities/trashEntity.dart';
 import 'package:kairo/domain/usecases/predictImageUsecase.dart';
 
@@ -15,6 +16,7 @@ class Predictcontroler extends GetxController {
 
   Future<void> predictImage(bool fromGallery) async {
     isloading.value = true;
+    error.value = '';
     final result = await predictImageUsecase(fromGallery);
     result.fold(
       (failure) {
@@ -23,6 +25,10 @@ class Predictcontroler extends GetxController {
       },
       (predicted) {
         predictedTrash.value = predicted;
+        predictedTrash.value = predictedTrash.value.copyWith(
+          className: predicted.className.toSet().toList(),
+          image: predicted.image,
+        );
       },
     );
     print('🗑️ CLASSES: ${predictedTrash.value.className}');
