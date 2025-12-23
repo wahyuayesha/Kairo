@@ -18,3 +18,7 @@ class CacheFailure extends Failure {
 class ValidationFailure extends Failure {
   ValidationFailure(super.message);
 }
+
+class DatabaseFailure extends Failure {
+  DatabaseFailure(super.message);
+}

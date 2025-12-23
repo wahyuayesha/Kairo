@@ -1,30 +1,25 @@
-import 'dart:convert';
-import 'dart:typed_data';
-
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kairo/core/colors.dart';
 import 'package:kairo/core/functions/class_text_separator.dart';
+import 'package:kairo/domain/entities/trashEntity.dart';
 import 'package:kairo/view/controllers/predictControler.dart';
 import 'package:kairo/view/controllers/wasteInfoController.dart';
 
 class Tipspage extends StatelessWidget {
-  Tipspage({super.key});
+  Tipspage({super.key, required this.predictedTrash});
   final predictController = Get.find<Predictcontroler>();
   final wasteInfoController = Get.find<Wasteinfocontroller>();
+  final TrashEntity predictedTrash;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: IconButton.filled(
         onPressed: () => Get.back(),
-        icon: Icon(
-          Icons.arrow_back_ios_rounded,
-          color: AppColors.primaryColor,
-        ),
-        style: IconButton.styleFrom(
-          backgroundColor: AppColors.fourthColor,
-        ),
+        icon: Icon(Icons.arrow_back_ios_rounded, color: AppColors.primaryColor),
+        style: IconButton.styleFrom(backgroundColor: AppColors.fourthColor),
       ),
       body: Stack(
         children: [
@@ -34,10 +29,13 @@ class Tipspage extends StatelessWidget {
 
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, top: 40, bottom: 20),
+              padding: const EdgeInsets.only(
+                left: 20,
+                right: 20,
+                top: 40,
+                bottom: 20,
+              ),
               child: Obx(() {
-                final predictedTrash = predictController.predictedTrash.value;
-
                 if (predictController.isloading.value) {
                   return Center(child: Text('loading'));
                 }
@@ -46,14 +44,11 @@ class Tipspage extends StatelessWidget {
                   return Center(child: Text('Tidak Ada Data'));
                 }
 
-                // Decode Base64
-                Uint8List bytes = base64Decode(predictedTrash.image);
-
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // Gambar
-                    Image.memory(bytes),
+                    Image.file(File(predictedTrash.image)),
 
                     // List item
                     ListView.builder(

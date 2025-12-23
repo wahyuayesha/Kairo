@@ -23,12 +23,15 @@ class DatabaseService {
       path,
       version: 1,
       onCreate: (db, version) async {
+        // DEBUG TIDAK BISA SAVE GAMBAR DALAM BENTUK BYTES
+        // UBAH KE PATH SEBELUM SAVE KE SQFLITE
         await db.execute('''
           CREATE TABLE predicted_trashes (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            class_names TEXT,
-            confidences TEXT,
-            image TEXT
+            class_name TEXT,
+            confidence TEXT,
+            image TEXT 
+            created_at TEXT
           )
         ''');
       },

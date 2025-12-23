@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/utils.dart';
 import 'package:kairo/core/colors.dart';
+import 'package:kairo/view/controllers/predictControler.dart';
+import 'package:kairo/view/widgets/riwayat_button.dart';
 
 class Riwayat extends StatelessWidget {
   const Riwayat({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final predictcontroler = Get.find<Predictcontroler>();
+
     return Scaffold(
       body: Stack(
         children: [
@@ -62,24 +67,39 @@ class Riwayat extends StatelessWidget {
                       gradient: AppColors.thirdGradient,
                       borderRadius: BorderRadius.circular(50),
                     ),
-                    child: Text(
-                      '5 Sampah Terdeteksi',
-                      style: TextStyle(
-                        color: AppColors.primaryColor,
-                        fontSize: 15,
+                    child: Obx(
+                      () => Text(
+                        '${predictcontroler.predictedTrashes.length} Sampah Terdeteksi',
+                        style: TextStyle(
+                          color: AppColors.primaryColor,
+                          fontSize: 15,
+                        ),
                       ),
                     ),
                   ),
                 ),
-                // Row(
-                //   children: [
-                //     Expanded(child: RiwayatButton()),
-                //     SizedBox(width: 10),
-                //     Expanded(child: RiwayatButton()),
-                //     SizedBox(width: 10),
-                //     Expanded(child: RiwayatButton()),
-                //   ],
-                // ),
+                // GRID VIEW OF RYWAT BUTTONS
+                SizedBox(height: 20),
+                Expanded(
+                  child: Obx(
+                    () => GridView.builder(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3,
+                        childAspectRatio: 0.58,
+                      ),
+                      itemBuilder: (context, index) {
+                        final trash = predictcontroler.predictedTrashes[index];
+                        return Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: RiwayatButton(trash: trash),
+                        );
+                      },
+                      itemCount: predictcontroler.predictedTrashes.length,
+                      shrinkWrap: true,
+                      // physics: NeverScrollableScrollPhysics(),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

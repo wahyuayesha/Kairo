@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kairo/core/colors.dart';
+import 'package:kairo/view/controllers/predictControler.dart';
 import 'package:kairo/view/controllers/wasteInfoController.dart';
 import 'package:kairo/view/pages/homepage.dart';
 
@@ -13,6 +14,7 @@ class Splashscreen extends StatefulWidget {
 
 class _SplashscreenState extends State<Splashscreen> {
   final Wasteinfocontroller controller = Get.find<Wasteinfocontroller>();
+  final Predictcontroler predictController = Get.find<Predictcontroler>();
 
   @override
   void initState() {
@@ -23,21 +25,22 @@ class _SplashscreenState extends State<Splashscreen> {
   }
 
   void loadWasteInfo() async {
-    await controller.fetchWasteInfo().then((_) {
-      Get.off(Homepage());
-    });
+    await controller.fetchWasteInfo();
+    await predictController.fetchAllPredictedTrash();
+    Get.off(() => Homepage());
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
-        Container(
-          decoration: BoxDecoration(
-           gradient: AppColors.backgroundGradinet
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(gradient: AppColors.backgroundGradinet),
           ),
-        ),
-        Center(child: CircularProgressIndicator())]),
+          Center(child: CircularProgressIndicator()),
+        ],
+      ),
     );
   }
 }
