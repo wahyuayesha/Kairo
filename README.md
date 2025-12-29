@@ -6,31 +6,35 @@
 
 ---
 
+<!-- preview image -->
 <!-- <img width="1241" height="649" alt="Layout 12" src="https://github.com/user-attachments/assets/adece555-12a3-42ad-9be2-8cea826f344d" /> -->
 
+## 🧠 what is kairo?
 
-## 🧠 What is Kairo?
+kairo is a smart waste recognition app that helps users identify waste through images and learn the proper way to manage, recycle, or dispose of it responsibly.
 
-Kairo is a smart waste recognition app that helps users identify waste through images and learn the proper way to manage, recycle, or dispose of it responsibly.
 ---
 
-## ✨ Features
+## ✨ features
 
-- 📸 Detect waste types from images using a pretrained model trained with YOLOv8
-- 💡 Provide clear guidance on how to properly manage, recycle, or dispose of each waste type
+- 📸 detect waste types from images using a pretrained model trained with yolo v8  
+- 💡 provide clear guidance on how to properly manage, recycle, or dispose of each waste type  
+
 ---
 
-## 🎯 Project Purpose
+## 🎯 project purpose
 
-This project is a simple personal learning initiative designed to expand my skills beyond mobile development, with a strong focus on artificial intelligence and computer vision. Through this project, I explore object detection using YOLOv8 while integrating AI into a real-world environmental use case.
+this project is a personal learning initiative designed to expand my skills beyond mobile development, with a strong focus on artificial intelligence and computer vision.  
+through this project, i explore object detection using yolo v8 while integrating ai into a real-world environmental use case.
+
 ---
 
-## 🖥️ Tech Stack
+## 🖥️ tech stack
 
-- **Flutter** — for mobile development  
-- **YOLOv8** - for waste detection using computer vision and object detection
-- **GetX** — for reactive and efficient state management  
-- **Flask** - as a lightweight backend to handle AI processing and API services
-- **SQflite** - as a local database for offline data storage on the mobile app
+- **flutter** — mobile application development  
+- **yolo v8** — waste detection using computer vision and object detection  
+- **getx** — reactive and efficient state management  
+- **flask** — lightweight backend for ai processing and api services  
+- **sqflite (sqlite)** — local database for offline data storage  
 
 ---
