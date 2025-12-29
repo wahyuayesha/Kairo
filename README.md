@@ -15,6 +15,29 @@ kairo is a smart waste recognition app that helps users identify waste through i
 
 ---
 
+## 🌱 impact
+
+by simplifying waste identification and disposal guidance, kairo:
+- helps users make better daily waste management decisions  
+- encourages responsible recycling behavior  
+- supports environmental awareness through practical, technology-driven solutions  
+
+---
+
+## ✨ features
+
+- 📸 detect waste types from images using a pretrained model trained with yolo v8  
+- 💡 provide clear guidance on how to properly manage, recycle, or dispose of each waste type  
+
+---
+
+## 🎯 project purpose
+
+this project is a personal learning initiative designed to expand my skills beyond mobile development, with a strong focus on artificial intelligence and computer vision.  
+through this project, i explore object detection using yolo v8 while integrating ai into a real-world environmental use case.
+
+---
+
 ## ✨ features
 
 - 📸 detect waste types from images using a pretrained model trained with yolo v8  
@@ -38,3 +61,4 @@ through this project, i explore object detection using yolo v8 while integrating
 - **sqflite (sqlite)** — local database for offline data storage  
 
 ---
+
